@@ -7,7 +7,6 @@ This repository contains three neural-network models for wind-farm performance p
 The graph-based model uses turbine-level, edge-level, and global features.
 Global input (x_globals): 3 features
 Node input (x_nodes): 3 features per turbine
-Edge input (x_edges): 2 features per edge
 Target: graph-level output from f_globals
 The graph connectivity is defined by the sender and receiver indices in the dataset.
 
