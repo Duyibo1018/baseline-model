@@ -8,6 +8,7 @@ Node input (x_nodes): 3 features per turbine
 Edge input (x_edges): 2 features per edge
 Target: graph-level output from f_globals
 The graph connectivity is defined by the sender and receiver indices in the dataset.
+
 ***CNN***
 The CNN uses a four-channel rasterized wind-farm layout:
 Input shape: 4 × 64 × 64
@@ -16,6 +17,7 @@ Turbine occupancy map
 Global feature 1
 Global feature 2
 Global feature 3
+
 ***MLP***
 For the variable-turbine case, the MLP uses a fixed-length input vector:
 80 × 2 turbine coordinates
@@ -24,7 +26,9 @@ For the variable-turbine case, the MLP uses a fixed-length input vector:
 + wind direction
 + turbulence intensity
 = 243 features
+
 *2. Model Architectures*
+
 ***GAT***
 Graph input
     ↓
@@ -38,6 +42,7 @@ Learning rate: 1e-4
 Learning-rate decay: 0.999
 Batch size: 128
 Epochs: 500
+
 ***CNN***
 4 × 64 × 64
     ↓
@@ -66,9 +71,11 @@ Batch size: 128
 64
  ↓
 1
+
 **Main hyperparameters:**
 Learning rate: 1e-4
 Batch size: 128
+
 *3. Output*
 
 All models output a single scalar representing the predicted wind-farm-level target.
