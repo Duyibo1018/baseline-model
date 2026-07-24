@@ -1,6 +1,8 @@
 ****Neural Network Models****
 This repository contains three neural-network models for wind-farm performance prediction: GAT, CNN, and MLP.
+
 *1. Data Input*
+
 ***GAT***
 The graph-based model uses turbine-level, edge-level, and global features.
 Global input (x_globals): 3 features
