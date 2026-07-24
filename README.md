@@ -39,6 +39,7 @@ Graph attention / message passing layers
 Graph-level feature aggregation
     ↓
 Regression output
+
 **Main training hyperparameters:**
 Learning rate: 1e-4
 Learning-rate decay: 0.999
@@ -57,6 +58,7 @@ Conv: 64 → 128
 Adaptive Average Pooling
     ↓
 MLP: 2048 → 64 → 32 → 1
+
 **Main hyperparameters:**
 Learning rate: 1e-4
 Batch size: 128
