@@ -3,7 +3,7 @@ This repository contains three neural-network models for wind-farm performance p
 
 *1. Data Input*
 
-***GAT***
+***GAT：***
 The graph-based model uses turbine-level, edge-level, and global features.
 Global input (x_globals): 3 features
 Node input (x_nodes): 3 features per turbine
@@ -11,7 +11,7 @@ Edge input (x_edges): 2 features per edge
 Target: graph-level output from f_globals
 The graph connectivity is defined by the sender and receiver indices in the dataset.
 
-***CNN***
+***CNN：***
 The CNN uses a four-channel rasterized wind-farm layout:
 Input shape: 4 × 64 × 64
 The four channels are:
@@ -20,7 +20,7 @@ Global feature 1
 Global feature 2
 Global feature 3
 
-***MLP***
+***MLP：***
 For the variable-turbine case, the MLP uses a fixed-length input vector:
 80 × 2 turbine coordinates
 + 80 turbine-existence mask values
@@ -31,7 +31,7 @@ For the variable-turbine case, the MLP uses a fixed-length input vector:
 
 *2. Model Architectures*
 
-***GAT***
+***GAT：***
 Graph input
     ↓
 Graph attention / message passing layers
@@ -45,7 +45,7 @@ Learning-rate decay: 0.999
 Batch size: 128
 Epochs: 500
 
-***CNN***
+***CNN：***
 4 × 64 × 64
     ↓
 Conv: 4 → 32
@@ -61,7 +61,7 @@ MLP: 2048 → 64 → 32 → 1
 Learning rate: 1e-4
 Batch size: 128
 
-***MLP***
+***MLP：***
 243
  ↓
 512
